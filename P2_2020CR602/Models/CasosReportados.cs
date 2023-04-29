@@ -12,8 +12,7 @@ namespace P2_2020CR602.Models
         public int casos_confirmados { get; set; }
         public int recuperados { get; set; }
         public int fallecidos { get; set; }
-        public Departamentos Departamento { get; set; }
 
-        public Generos Genero { get; set; }
+
     }
 }

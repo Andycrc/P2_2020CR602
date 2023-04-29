@@ -12,7 +12,7 @@
 </p>
 
 <div class="container">
-    <form method="post" action="CreateNuevo">
+    <form method="post" asp-action="Create">
         <div class="justify-content-start">
             <h5>Reportar casos</h5>
         </div>
@@ -22,14 +22,14 @@
             <div class="col-md-6">
                 <p>Departamento</p>
             
-                    @Html.DropDownList("nombre_departamento", ViewData["listDepa"] as SelectList, "-- Seleccione un departamento --", new { @class = "form-control" })         
+                    @Html.DropDownList("id_departamento", ViewData["listDepa"] as SelectList, "-- Seleccione un departamento --", new { @class = "form-control" })         
             
 
             </div>
              <div class="col-md-6">
                 <p>Genero</p>
            
-                    @Html.DropDownList("nombre_genero", ViewData["listGenero"] as SelectList, "-- Seleccione un genero --", new { @class = "form-control" })         
+                    @Html.DropDownList("id_genero", ViewData["listGenero"] as SelectList, "-- Seleccione un genero --", new { @class = "form-control" })         
             
 
             </div>

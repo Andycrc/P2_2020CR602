@@ -45,17 +45,19 @@ namespace P2_2020CR602.Controllers
             return View();
         }
 
-        [HttpPost]
-        public IActionResult CreateNuevo(CasosReportados casosReportados)
+        public async Task<IActionResult> Create([Bind("id_departamento,id_genero,casos_confirmados,recuperados,fallecidos")] CasosReportados departamentos)
         {
-            
-                _context.Add(casosReportados);
-                _context.SaveChanges();
-                return RedirectToAction("Index");
-           
+            if (ModelState.IsValid)
+
+            {
+              
+
+                _context.Add(departamentos);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(departamentos);
         }
-
-
 
 
     }
